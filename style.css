@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+
+.top-menu {
+    background: #e0e0e0;
+    border: 1px solid #bbb;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.top-menu a {
+    float: left;
+    display: block;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-right: 1px solid #bbb;
+    font-size: 15px;
+}
+.top-menu a:hover {
+    background-color: #ccc;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.left-col {
+    float: left;
+    width: 200px;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    padding: 15px;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+.right-col {
+    float: right;
+    width: 200px;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    padding: 15px;
+    margin-left: 20px;
+    border-radius: 6px;
+}
+
+.center-col {
+    overflow: hidden; 
+    background: #fdfdfd;
+    border: 1px solid #90caf9;
+    padding: 20px;
+    min-height: 350px;
+    border-radius: 6px;
+}
+
+.hover-container {
+    display: inline-block;
+    margin: 10px;
+}
+
+.hover-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hover-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 80, 180, 0.8);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: left 0.3s ease;
+}
+.hover-box:hover .layer {
+    left: 0;
+}
+
+.vertical-menu-wrapper {
+    margin-top: 20px;
+    width: 250px;
+}
+
+.v-nav {
+    background: linear-gradient(to bottom, #e1e1e1, #d0d0d0);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    position: relative;
+    z-index: 10;
+}
+
+.v-nav > a, 
+.v-nav .has-dropdown > a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    font-size: 15px;
+}
+
+.v-nav > a:hover, 
+.v-nav .has-dropdown > a:hover {
+    background: linear-gradient(to bottom, #ccc, #999);
+    color: #fff;
+}
+
+.v-nav .has-dropdown,
+.v-nav .has-dropdown-sub {
+    position: relative;
+}
+
+.v-nav .dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 200px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    z-index: 100;
+}
+
+.v-nav .dropdown-sub {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 180px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    z-index: 101;
+}
+
+.v-nav .dropdown > a,
+.v-nav .has-dropdown-sub > a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    font-weight: normal;
+}
+
+.v-nav .dropdown-sub a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    text-align: left;
+}
+
+.v-nav .dropdown > a:hover,
+.v-nav .has-dropdown-sub > a:hover,
+.v-nav .dropdown-sub a:hover {
+    background: #e0e0e0;
+    color: #000;
+}
+
+.v-nav .has-dropdown:hover > .dropdown {
+    display: block;
+}
+
+.v-nav .has-dropdown-sub:hover > .dropdown-sub {
+    display: block;
+}
+.left-col h3, .right-col h3, .center-col h3 {
+    margin-top: 0;
+}
+.left-col p, .right-col p, .right-col ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.right-col ul {
+    padding-left: 20px;
+}
+.accordion-menu {
+    width: 250px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.accordion-menu .acc-header {
+    display: block;
+    padding: 15px;
+    background: linear-gradient(to bottom, #e1e1e1, #d0d0d0);
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.accordion-menu .acc-header:hover {
+    background: linear-gradient(to bottom, #ccc, #999);
+    color: #fff;
+}
+
+.accordion-menu .acc-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: #f9f9f9;
+}
+
+.accordion-menu .acc-submenu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.accordion-menu .acc-submenu a:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-menu .acc-item:hover .acc-submenu {
+    max-height: 200px;
+}

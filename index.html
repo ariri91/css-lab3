@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Лаба 3. Макет и меню</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-menu">
+        <a href="#">Главная</a>
+        <a href="#">Отделы продаж</a>
+        <a href="#">Поставщики</a>
+        <a href="#">Контакты</a>
+        <a href="#">О нас</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="left-col">
+            <h3 style="margin-top:0;">Новости</h3>
+            <p style="font-size: 14px; line-height: 1.5;">МОСКВА, 21 окт - РИА Новости. Жители столицы выбрали имя детенышу древесного примата потто в Московском зоопарке и назвали его Нимба, сообщил столичный зоосад.</p>
+        </div>
+        <div class="right-col">
+            <h3 style="margin-top:0;">Контакты</h3>
+            <p style="font-size: 14px;"><b>Адрес:</b> г. Москва, ул. Кошачья 12<br><br>
+            <b>Телефон:</b><br>8-999-999-99-99</p>
+            <h3>Услуги</h3>
+            <ul style="font-size: 14px; padding-left: 20px;">
+                <li>Разработка дизайна</li>
+                <li>Разработка web-приложений</li>
+                <li>Разработка web-сервисов</li>
+            </ul>
+        </div>
+        <div class="center-col">
+            <h3 style="margin-top:0;">Наши коты</h3>
+            <div class="hover-container">
+                <div class="hover-box">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/11552302/img_93a5eff5266411ef8a0072070a78f4c1/orig" alt="Кот">
+                    <a href="#" class="layer">Серый кот</a>
+                </div>
+            </div>
+            
+            <div class="hover-container">
+                <div class="hover-box">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/11465050/img_569ad4e4266411efad257addb932874a/orig" alt="Кот">
+                    <a href="#" class="layer">Рыжий кот</a>
+                </div>
+            </div>
+
+            <div class="hover-container">
+                <div class="hover-box">
+                    <img src="https://avatars.mds.yandex.net/get-shedevrum/12154130/img_7f2c37b9266411efb092aa83cb71e2b8/orig" alt="Кот">
+                    <a href="#" class="layer">Полосатый кот</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <h2>Задание 2. Вертикальное меню с выпадающими подменю и двойной вложенностью</h2>
+        <div class="vertical-menu-wrapper">
+        <nav class="v-nav">
+            <a href="#">ГЛАВНАЯ</a>
+
+            <div class="has-dropdown">
+                <a href="#">ОТДЕЛЫ ПРОДАЖ</a>
+                <div class="dropdown">
+                    <a href="#">1 отдел</a>
+                    <a href="#">2 отдел</a>
+                    <a href="#">3 отдел</a>
+                </div>
+            </div>
+
+            <div class="has-dropdown">
+                <a href="#">ПОСТАВЩИКИ</a>
+                <div class="dropdown">
+                    <div class="has-dropdown-sub">
+                        <a href="#">ООО "Дизайн" &raquo;</a>
+                        <div class="dropdown-sub">
+                            <a href="#">Услуги дизайна</a>
+                            <a href="#">Портфолио</a>
+                            <a href="#">Контакты</a>
+                        </div>
+                    </div>
+                    <a href="#">ООО "Арт"</a>
+                    <a href="#">ООО "Фотостиль"</a>
+                </div>
+            </div>
+
+            <a href="#">НАШИ УСЛУГИ</a>
+            <a href="#">КОНТАКТЫ</a>
+            <a href="#">О НАС</a>
+        </nav>
+    </div>
+
+    <h2>Задание 3. Вертикальное меню</h2>
+    
+    <div class="accordion-menu">
+        <div class="acc-item">
+            <a href="#" class="acc-header">ГЛАВНАЯ</a>
+            <!-- Подменю (по умолчанию скрыто) -->
+            <div class="acc-submenu">
+                <a href="#">Главная страница</a>
+                <a href="#">Контакты</a>
+                <a href="#">О Нас</a>
+            </div>
+        </div>
+
+        <a href="#" class="acc-header">ОТДЕЛЫ ПРОДАЖ</a>
+        <div class="acc-item">
+            <a href="#" class="acc-header">ПОСТАВЩИКИ</a>
+            <div class="acc-submenu">
+                <a href="#">ООО "Дизайн"</a>
+                <a href="#">ООО "Арт"</a>
+                <a href="#">ООО "Фотостиль"</a>
+            </div>
+        </div>
+
+        <a href="#" class="acc-header">НАШИ УСЛУГИ</a>
+        <a href="#" class="acc-header">КОНТАКТЫ</a>
+        <a href="#" class="acc-header">О НАС</a>
+    </div>
+</body>
+</html>
